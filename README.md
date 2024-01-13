@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: WORKING
-- This program is able to disable the Microsoft Anti-Virus, however, due to development issues it was not tested in Safe Mode until later, it is COMPLETE OVERKILL and does the task 10 times over, though thats nice too B).  
+- This program is able to disable the Microsoft Anti-Virus, however, due to development issues it was not tested in Safe Mode until later, it, is COMPLETE OVERKILL and does the task 10 times over, though thats nice too B).  
 
 ### DESCRIPTION
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense.
