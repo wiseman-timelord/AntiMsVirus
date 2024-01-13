@@ -92,8 +92,9 @@ Error 4872 MsMpEng
 
 ### DEVELOPMENT
 - Not really going to happen, but heres the potential plans... 
-1. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
-2. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
+1. Options to delete the defender folder, after setting the defender folder permission (is this safe?).
+2. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
+3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
 ### DISCLAIMER
 This program is provided "as is" without warranties or support. Users are responsible for the content they, download and use, as well as, any resulting damage to, hardware or sanity.
