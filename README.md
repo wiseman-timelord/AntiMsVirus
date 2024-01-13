@@ -38,7 +38,7 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 
     7. Disable Defender Features
 
-Select, MenuOptions=1-7, Exit Program=X:
+Select, Menu Options=1-7, Exit Program=X:
 
 ```
 - And here we see it in operation...
