@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
--Wont take long, will be done today...
+- Wont take long, will be done today...
 
 ### DESCRIPTION:
 In short, a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, that seems to turn itself back on, it is focused on locating and terminating processes that are likely related to Microsoft's anti-malware services or applications (as indicated by the name patterns "Mp" and "MsMp").  
