@@ -1,18 +1,17 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This is probably going to involve a lot more work now/possibly a dead end, obviosly I made the main script to only run if its in admin. GPT: you may need to look into more advanced techniques, which could involve system-level operations beyond the scope of a typical PowerShell script. 
+- This involved a lot more work than I wanted, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown. is stubborn, and insists upon re-launcing...
 ```
 Found 2 processes
-Attempting to stop process 8264 - MpCopyAccelerator
-Cannot stop process 8264 - MpCopyAccelerator: Access Denied
-Attempting to stop process 4872 - MsMpEng
-Cannot stop process 4872 - MsMpEng: Access Denied
+Terminating 7944 MpCopyAccelerator
+Error 7944 MpCopyAccelerator
+Terminating 4952 MsMpEng
+Error 4952 MsMpEng
 ```
 - Next steps are...
-1. TESTING!
-2. FIXING!
-3. Consistency in error reporting.
+1. Finding new techniques to complete virus removal.
+2. Consistency in error reporting.
 
 ### DESCRIPTION:
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). This tool is intended to be run at startup as a powershell command from the Task Scheduler, but will also be designed to be able to, as required then, be run by the user. The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense. The project is an intellectual curiosity currently, but it would be nice if it works. 
