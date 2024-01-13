@@ -42,7 +42,7 @@ function Show-Menu {
         Write-Host "    5. Disable Defender Scheduled Tasks`n"
         Write-Host "    6. Run Process Scans & Terminate`n"
         Write-Host "    7. Disable Defender Features`n"
-        Write-Host -NoNewline "Select, MenuOptions=1-7, Exit Program=X: "
+        Write-Host -NoNewline "Select, Menu Options=1-7, Exit Program=X: "
         $input = Read-Host
         switch ($input.ToUpper()) {
             '1' {
