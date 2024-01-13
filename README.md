@@ -41,17 +41,19 @@ Disabling Defender Features...
 Finding & Closing, Processes...
 Starting Pass 1...
 Pass 1 In 5 Seconds..
-Sleeping for 5 seconds..
-Found 0 processes
+Found 2 processes
+Terminating 8264 MpCopyAccelerator
+Error 8264 MpCopyAccelerator
+Terminating 4872 MsMpEng
+Error 4872 MsMpEng
 Starting Pass 2...
 Pass 2 In 5 Seconds..
-Sleeping for 5 seconds..
-Found 0 processes
-Starting Pass 3...
-Pass 3 In 5 Seconds..
-Sleeping for 5 seconds..
-Found 0 processes
-...3 Passes Complete.
+Found 2 processes
+Terminating 8264 MpCopyAccelerator
+Error 8264 MpCopyAccelerator
+Terminating 4872 MsMpEng
+Error 4872 MsMpEng
+...2 Passes Complete.
 
 
 ....AntiMsVirus Finished.
