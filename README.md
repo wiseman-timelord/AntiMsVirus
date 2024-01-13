@@ -36,8 +36,6 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 
     5. Run Process Scans & Terminate
 
-    X. Exit Program
-
 
 Select, MenuOptions=1-5, Exit Program=X:
 
