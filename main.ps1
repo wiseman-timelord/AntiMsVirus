@@ -84,6 +84,7 @@ function Show-Menu {
             }
         }
     }
+    return
 }
 
 
