@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This is probably going to involve a lot more work now/possibly a dead end, obviosly I made the main script to only run in admin. GPT: you may need to look into more advanced techniques, which could involve system-level operations beyond the scope of a typical PowerShell script. 
+- This is probably going to involve a lot more work now/possibly a dead end, obviosly I made the main script to only run if its in admin. GPT: you may need to look into more advanced techniques, which could involve system-level operations beyond the scope of a typical PowerShell script. 
 ```
 Found 2 processes
 Attempting to stop process 8264 - MpCopyAccelerator
