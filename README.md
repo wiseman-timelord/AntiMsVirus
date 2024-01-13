@@ -9,7 +9,7 @@ In short, a tool to, shut down and close, the Microsoft Anti-Malware, in Windows
 ### PHILOSOPHY
 - Background tasks like virus checks can cause system lag, especially during gaming on a server. Reducing these background tasks can ensure smoother performance for resource-heavy applications.
 - Preferring offline installers and personal monitoring over automatic virus scans, users who understand their system well might not need extra security software, especially as it is present on download servers.
-- Non-required mandatory background processes, are similar to viruses, consume resources involuntarily, and in this case it involves i/o, the final frontier for multi-thread systems.
+- Non-required mandatory background processes, are similar to viruses, consume resources involuntarily, and in this case it involves i/o, the final frontier for multi-core systems.
 
 ### PREVIEW
 ```
