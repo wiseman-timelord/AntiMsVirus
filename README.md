@@ -9,6 +9,7 @@ Error 7944 MpCopyAccelerator
 Terminating 4952 MsMpEng
 Error 4952 MsMpEng
 ```
+- As a result of running AntiMsVirus, it is possible to stop `MpCopyAccelerator` from running, and that is the one producing the I/O noise. Mainly this `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked, ...GPT: disable Tamper Protection might vary between different Windows versions. Under such circumstances, `MsMpEng` keeps re-running itself after being terminated, so I have found no way to disable both of the services, which was the goal.
 - Next steps are...
 1. Finding new techniques to complete virus removal.
 2. Consistency in error reporting.
