@@ -7,9 +7,9 @@
 In short, a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, that seems to turn itself back on, it is focused on locating and terminating processes that are likely related to Microsoft's anti-malware services or applications (as indicated by the name patterns "Mp" and "MsMp"). 
 
 ### PHILOSOPHY
-- Background tasks like virus checks can cause system lag, especially during gaming. Reducing these can ensure smoother performance for resource-heavy applications.
-- Preferring offline installers and personal monitoring over automatic virus scans, users who understand their system well might not need extra security software.
-- Mandatory background processes, similar to viruses, consume resources involuntarily. Disabling them can lead to more efficient system performance for expert users.
+- Background tasks like virus checks can cause system lag, especially during gaming on a server. Reducing these background tasks can ensure smoother performance for resource-heavy applications.
+- Preferring offline installers and personal monitoring over automatic virus scans, users who understand their system well might not need extra security software, especially as it is present on download servers.
+- Non-required mandatory background processes, are similar to viruses, consume resources involuntarily.
 
 ### PREVIEW
 ```
