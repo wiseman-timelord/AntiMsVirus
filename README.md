@@ -75,7 +75,7 @@ Error 4872 MsMpEng
 ```
 
 ### REQUIREMENTS
-- Windows 10/11 (unsure about 11, I will check later)
+- Windows 10/11
 - Windows Powershell or Powershell Core.
 
 ### USAGE
