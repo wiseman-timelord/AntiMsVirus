@@ -11,7 +11,7 @@ Error 4952 MsMpEng
 ```
 - The options in the menu have limited success, but do some things as intended, however, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked...I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to, self-repair or have not been disabled, again my instinct says Tamper Protection.
 - Next steps are...
-1. Finding new techniques to shutdown Tamper Protection.
+1. Finding new techniques to, shutdown and disable, Tamper Protection.
 2. Consistency in error reporting.
 
 ### DESCRIPTION:
