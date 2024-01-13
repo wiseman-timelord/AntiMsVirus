@@ -1,5 +1,32 @@
 # Script: scripts\utility.ps1
 
+function Disable-DefenderViaRegistry {
+    Write-Host "`nDisabling Defender via Registry..."
+    Start-Sleep -Seconds 1
+
+    try {
+        Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Value 1 -ErrorAction Stop
+        Write-Host "..Registry Modified"
+
+        # Confirming the change
+        Write-Host "Checking Values..
+		$regValue = Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware"
+        if ($regValue.DisableAntiSpyware -eq 1) {
+            Write-Host "..Defender Registry Disabled."
+        } else {
+            Write-Host "..Error Value Un-Changed!`n"
+        }
+		Write-Host "`n...Registry Edits Finished."
+    }
+    catch {
+        $errorMessage = "Error registry: $($_.Exception.Message)"
+        Log-Error $errorMessage
+        Write-Host "..Error encountered: $errorMessage"
+    }
+    Start-Sleep -Seconds 2
+}
+
+
 function Run-DisableTamperProtection {
     Write-Host "Disabling Tamper Protection..."
     try {
@@ -104,6 +131,28 @@ function Stop-TargetProcesses {
     }
 }
 
+function Disable-DefenderServicesAndDrivers {
+    Write-Host "Disabling Defender Services and Drivers..."
+    $services = @("WdNisSvc", "WinDefend", "Sense")
+    $drivers = @("WdnisDrv", "wdfilter", "wdboot")
+
+    try {
+        foreach ($svc in $services) {
+            Write-Host "..Disabling Service: $svc"
+            Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$svc" -Name Start -Value 4 -ErrorAction Stop
+        }
+        foreach ($drv in $drivers) {
+            Write-Host "..Disabling Driver: $drv"
+            Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\$drv" -Name Start -Value 4 -ErrorAction Stop
+        }
+        Write-Host "...Defender Services and Drivers Disabled.`n"
+    }
+    catch {
+        $errorMessage = "Error in Disable-DefenderServicesAndDrivers: $($_.Exception.Message)"
+        Log-Error $errorMessage
+        Write-Host $errorMessage
+    }
+}
 
 
 

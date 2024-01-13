@@ -11,7 +11,7 @@ $Global:ScanPassCounter = 0
 # Initialization
 Set-Location -Path $PSScriptRoot
 
-# Got Admin?
+# Got Admin
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Host "Admin Required, Run As Admin!`n" -ForegroundColor Red
     exit
@@ -19,7 +19,6 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 # Introduction
 Clear-Host
-Show-AsciiArt
 Write-Host "`n`nAntiMsVirus Started....`n`n"
 
 # Function to log errors
@@ -37,12 +36,56 @@ function Log-Error {
     }
 }
 
+# Function to Show Menu and Handle User Input
+function Show-Menu {
+    while ($true) {
+        Clear-Host
+        Show-AsciiArt
+        Write-Host "`n`n    1. Registry Edits (requires restart)`n"
+        Write-Host "    2. Disable Tamper Protection`n"
+        Write-Host "    3. Disable Defender Features`n"
+        Write-Host "    4. Disable Services (requires restart)`n"
+        Write-Host "    5. Run Process Scans & Terminate`n"
+        Write-Host "    X. Exit Program`n`n"
+        Write-Host -NoNewline "Select, MenuOptions=1-5, Exit Program=X: "
+        $input = Read-Host
 
+        switch ($input.ToUpper()) {
+            '1' {
+                Disable-DefenderViaRegistry
+                Start-Sleep -Seconds 2
+            }
+            '2' {
+                Run-DisableTamperProtection
+                Start-Sleep -Seconds 2
+            }
+            '3' {
+                Run-DisableDefenderFeatures
+                Start-Sleep -Seconds 2
+            }
+            '4' {
+                Disable-DefenderServicesAndDrivers
+                Start-Sleep -Seconds 2
+            }
+            '5' {
+                Run-3ScansAndTerminations
+                Start-Sleep -Seconds 2
+            }
+            'X' {
+                Write-Host "Exiting..."
+                Start-Sleep -Seconds 1
+                break
+            }
+            default {
+                Write-Host "Invalid choice, please try again."
+                Start-Sleep -Seconds 2
+            }
+        }
+    }
+}
 
 # Entry Point
-Run-DisableTamperProtection
-Run-DisableDefenderFeatures
-Run-3ScansAndTerminations
+Show-Menu
 
 # Exit
-Write-Host "`n`n....AntiMsVirus Finished.`n"
+Write-Host "`n....AntiMsVirus Finished.`n"
