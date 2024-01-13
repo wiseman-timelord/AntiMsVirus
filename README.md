@@ -85,7 +85,7 @@ Error 4872 MsMpEng
 
 ### USAGE
 * You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus. 
-1. On Windows 10v1903-11, you will first boot into Safe Mode, type "safe mode" into the start menu. 
+1. On Windows 10v1903-11, you must first boot into Safe Mode, type "safe mode" into the start menu. 
 2. When Safe Mode boots up, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
 3. Go through each option on the menu in sequence, puntil you complete all 7.
 4. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
