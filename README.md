@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This is probably going to involve a lot more work now/possibly a dead end. 
+- This is probably going to involve a lot more work now/possibly a dead end, obviosly I made the main script to only run in admin. 
 ```
 Found 2 processes
 Attempting to stop process 8264 - MpCopyAccelerator
