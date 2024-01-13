@@ -97,6 +97,52 @@ function Translate-DefenderAction {
     }
 }
 
+
+# Function Change-DefenderFolderOwnership
+function Change-DefenderFolderOwnership {
+    Clear-Host
+    Show-Header 
+    Write-Host "Changing Defender Folder Ownership..."
+
+    $defenderPath = "C:\ProgramData\Microsoft\Windows Defender"
+    $ownershipCommand = @"
+takeown /f $defenderPath /r /d y
+icacls $defenderPath /grant Administrators:F /t
+"@
+
+    try {
+        # Change the ownership of the Windows Defender folder
+        Invoke-Expression -Command $ownershipCommand
+        Write-Host "...Defender Folder Ownership Changed.`n"
+    }
+    catch {
+        $errorMessage = "Error in Change-DefenderFolderOwnership: $($_.Exception.Message)"
+        Log-Error $errorMessage
+        Write-Host $errorMessage
+    }
+}
+
+
+# Function Disable-DefenderScheduledTasks
+function Disable-DefenderScheduledTasks {
+    Clear-Host
+    Show-Header 
+    Write-Host "Disabling Defender Scheduled Tasks..."
+    try {
+        Get-ScheduledTask "Windows Defender Cache Maintenance" | Disable-ScheduledTask
+        Get-ScheduledTask "Windows Defender Cleanup" | Disable-ScheduledTask
+        Get-ScheduledTask "Windows Defender Scheduled Scan" | Disable-ScheduledTask
+        Get-ScheduledTask "Windows Defender Verification" | Disable-ScheduledTask
+        Write-Host "...Defender Scheduled Tasks Disabled.`n"
+    }
+    catch {
+        $errorMessage = "Error in Disable-DefenderScheduledTasks: $($_.Exception.Message)"
+        Log-Error $errorMessage
+        Write-Host $errorMessage
+    }
+}
+
+
 # Function Run 3scansandterminations
 function Run-3ScansAndTerminations {
     Clear-Host

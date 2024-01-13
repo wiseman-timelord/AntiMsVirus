@@ -35,32 +35,42 @@ function Show-Menu {
     while ($true) {
         Clear-Host
         Show-AsciiArt
-        Write-Host "`n`n    1. Registry Edits (requires restart)`n"
-        Write-Host "    2. Disable Tamper Protection`n"
-        Write-Host "    3. Disable Defender Features`n"
-        Write-Host "    4. Disable Services (requires restart)`n"
-        Write-Host "    5. Run Process Scans & Terminate`n`n"
-        Write-Host -NoNewline "Select, MenuOptions=1-5, Exit Program=X: "
+        Write-Host "`n    1. Disable Tamper Protection`n"
+        Write-Host "    2. Registry Edits (requires restart)`n"
+        Write-Host "    3. Disable Services (requires restart)`n"
+        Write-Host "    4. Defender Folder Ownership`n"
+        Write-Host "    5. Disable Defender Scheduled Tasks`n"
+        Write-Host "    6. Run Process Scans & Terminate`n"
+        Write-Host "    7. Disable Defender Features`n"
+        Write-Host -NoNewline "Select, MenuOptions=1-7, Exit Program=X: "
         $input = Read-Host
         switch ($input.ToUpper()) {
             '1' {
-                Disable-DefenderRegistry
-                Start-Sleep -Seconds 5
-            }
-            '2' {
                 Run-DisableTamperProtection
                 Start-Sleep -Seconds 5
             }
-            '3' {
-                Run-DisableDefenderFeatures
+            '2' {
+                Disable-DefenderRegistry
                 Start-Sleep -Seconds 5
             }
-            '4' {
+            '3' {
                 Disable-DefenderServicesAndDrivers
                 Start-Sleep -Seconds 5
             }
+            '4' {
+                Change-DefenderFolderOwnership
+                Start-Sleep -Seconds 5
+            }
             '5' {
+                Disable-DefenderScheduledTasks
+                Start-Sleep -Seconds 5
+            }
+            '6' {
                 Run-3ScansAndTerminations
+                Start-Sleep -Seconds 5
+            }
+            '7' {
+                Run-DisableDefenderFeatures
                 Start-Sleep -Seconds 5
             }
             'X' {
@@ -75,6 +85,7 @@ function Show-Menu {
         }
     }
 }
+
 
 # Entry Point
 Show-Menu
