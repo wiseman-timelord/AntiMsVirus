@@ -69,5 +69,10 @@ Press any key to continue . . .
 
 ```
 
+### USAGE
+1. You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus/Anti-Malware.  
+2. If you do decide to use this program dispite my advice, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
+3. Utilize your own choice of Security software upon your own computer, I advise passive protection ran monthly.
+
 ### DISCLAIMER
 This program is provided "as is" without warranties or support. Users are responsible for the content they, download and use, as well as, any resulting damage to, hardware or sanity.
