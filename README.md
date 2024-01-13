@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This involved a lot more work than I intended, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown, permanently...
+- AntiMsVirus requires to be further developed, but for now it has hit a brick wall, having implemented all of GPT's instructions upon what can be done. `MpCopyAccelerator` and `MsMpEng`, are still refusing to be, disabled or shutdown, permanently...
 ```
 Found 2 processes
 Terminating 7944 MpCopyAccelerator
@@ -9,10 +9,9 @@ Error 7944 MpCopyAccelerator
 Terminating 4952 MsMpEng
 Error 4952 MsMpEng
 ```
-- The options in the menu have limited success, but do some things as intended, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked...GPT: disable Tamper Protection might vary between different Windows versions.
-- I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to self-repair or something. 
+- The options in the menu have limited success, but do some things as intended, however, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked...I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to, self-repair or have not been disabled, again my instinct says Tamper Protection.
 - Next steps are...
-1. Finding new techniques to complete virus removal.
+1. Finding new techniques to shutdown Tamper Protection.
 2. Consistency in error reporting.
 
 ### DESCRIPTION:
