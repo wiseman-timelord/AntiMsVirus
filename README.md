@@ -12,12 +12,7 @@ Cannot stop process 4872 - MsMpEng: Access Denied
 - Next steps are, improving the disable defender services, with a report after waiting 2 seconds, to show their current status.
 
 ### DESCRIPTION:
-Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). This tool is intended to be run at startup as a powershell command from the Task Scheduler, but will also be designed to be able to, as required then, be run by the user. The project is an intellectual curiosity currently, but if it works, it would be nice.
-
-### PHILOSOPHY
-- Background tasks like virus checks can cause system lag, especially during gaming on a server. Reducing these background tasks can ensure smoother performance for resource-heavy applications.
-- Preferring offline installers and personal monitoring over automatic virus scans, users who understand their system well might not need extra security software, especially as it is present on download servers.
-- Non-required mandatory background processes, are similar to viruses, consume resources involuntarily, and in this case it involves i/o, the final frontier for multi-core systems.
+Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). This tool is intended to be run at startup as a powershell command from the Task Scheduler, but will also be designed to be able to, as required then, be run by the user. The project is an intellectual curiosity currently, but if it works, it would be nice. The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task.
 
 ### PREVIEW
 ```
