@@ -90,10 +90,11 @@ Error 4872 MsMpEng
 - Windows Powershell or Powershell Core.
 
 ### USAGE
-1. You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus/Anti-Malware.  
-2. If you do decide to use this program dispite my advice, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
-3. Go through each option on the menu in sequence, producing restarts as indicated until you complete 5.
-3. Utilize your own choice of Security software upon your own computer, I advise passive protection ran monthly.
+* You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus. 
+1. On Windows 10v1903-11, you will first boot into Safe Mode, type "safe mode" into the start menu. 
+2. When Safe Mode boots up, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
+3. Go through each option on the menu in sequence, puntil you complete all 7.
+4. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
 
 ### DISCLAIMER
 This program is provided "as is" without warranties or support. Users are responsible for the content they, download and use, as well as, any resulting damage to, hardware or sanity.
