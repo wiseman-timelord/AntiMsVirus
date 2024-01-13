@@ -37,20 +37,11 @@ function Log-Error {
     }
 }
 
-# Function: Run Go3MpScans
-function Run-Go3MpScans {
-    Write-Host "Finding & Closing, Processes..."
-    try {
-        1..3 | ForEach-Object { ValidateAndExecute }
-    }
-    catch {
-        Log-Error $_.Exception.Message
-    }
-    Write-Host "...3 Passes Complete."
-}
+
 
 # Entry Point
-Run-Go3MpScans
+Run-DisableDefenderFeatures
+Run-3ScansAndTerminations
 
 # Exit
 Write-Host "`n`n....PowerShell Script Finished.`n"
