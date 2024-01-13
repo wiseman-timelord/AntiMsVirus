@@ -30,6 +30,10 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 AntiMsVirus Started....
 
 
+Disabling Tamper Protection...
+Error: Operation failed with the following error: 0x%1!x!
+..Skipping State Check
+
 Disabling Defender Features...
 ..Disabling Low-Threats..
 ..Disabling Moderate-Threats..
