@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This involved a lot more work than I intended, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown...
+- This involved a lot more work than I intended, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown, permanently...
 ```
 Found 2 processes
 Terminating 7944 MpCopyAccelerator
@@ -9,9 +9,8 @@ Error 7944 MpCopyAccelerator
 Terminating 4952 MsMpEng
 Error 4952 MsMpEng
 ```
-- As a result of running AntiMsVirus, it is possible to stop `MpCopyAccelerator` from running, and that is the one producing the I/O noise. Under such circumstances, `MsMpEng` keeps re-running itself after being terminated, so I have found no way to disable both of the services, which was the goal.
-- The options in the menu have limited success, but do some things as intended, and in the process break the ms anti-virus on/off toggle, but that means we disabled some of it, which is a minor victory. 
-- This `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked, ...GPT: disable Tamper Protection might vary between different Windows versions. 
+- The options in the menu have limited success, but do some things as intended, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked...GPT: disable Tamper Protection might vary between different Windows versions.
+- I tried doing all options in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to self-repair or something. 
 - Next steps are...
 1. Finding new techniques to complete virus removal.
 2. Consistency in error reporting.
