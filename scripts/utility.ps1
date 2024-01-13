@@ -1,7 +1,7 @@
 # Script: scripts\utility.ps1
 
-function Disable-DefenderViaRegistry {
-    Write-Host "`nDisabling Defender via Registry..."
+function Disable-DefenderRegistry {
+    Write-Host "`nDisabling Defender Registry..."
     Start-Sleep -Seconds 1
 
     try {
@@ -9,7 +9,7 @@ function Disable-DefenderViaRegistry {
         Write-Host "..Registry Modified"
 
         # Confirming the change
-        Write-Host "Checking Values..
+        Write-Host "Checking Values.."
 		$regValue = Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware"
         if ($regValue.DisableAntiSpyware -eq 1) {
             Write-Host "..Defender Registry Disabled."
