@@ -3,19 +3,21 @@
 # Terminate Processes
 function Stop-TargetProcesses {
     try {
-        $AAmmProcesses = Get-Process | Where-Object { ($_.ProcessName -like "Mp*" -or $_.ProcessName -like "MsMp*") -and $_.Path }
+        $AAmmProcesses = Get-Process | Where-Object { $_.ProcessName -like "Mp*" -or $_.ProcessName -like "MsMp*" }
         Write-Host "Found $($AAmmProcesses.Count) processes"
 
         foreach ($AAmmProcess in $AAmmProcesses) {
+            Write-Host "Attempting to stop process $($AAmmProcess.Id) - $($AAmmProcess.ProcessName)"
             $AAmmProcess | Stop-Process -ErrorAction Stop
-            Write-Host "Stopped $($AAmmProcess.Id)"
+            Write-Host "Stopped $($AAmmProcess.Id) - $($AAmmProcess.ProcessName)"
         }
     }
     catch {
         Log-Error $_.Exception.Message
-        Write-Host "Error occurred during process termination."
+        Write-Host "Error occurred during process termination: $($_.Exception.Message)"
     }
 }
+
 
 # Validate and call SleepAndExecute
 function ValidateAndExecute {
