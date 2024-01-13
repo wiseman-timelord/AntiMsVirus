@@ -4,7 +4,7 @@
 - Wont take long, will be done today...
 
 ### DESCRIPTION:
-In short, a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, that seems to turn itself back on, it is focused on locating and terminating processes that are likely related to Microsoft's anti-malware services or applications (as indicated by the name patterns "Mp" and "MsMp"). 
+In short, a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, that seems to turn itself back on, it is focused on locating and terminating processes that are likely related to Microsoft's anti-malware services or applications (as indicated by the name patterns "Mp" and "MsMp"). This tool is intended to be run at startup as a powershell command from the Task Scheduler, but will also be designed to be able to as required be run by the user. 
 
 ### PHILOSOPHY
 - Background tasks like virus checks can cause system lag, especially during gaming on a server. Reducing these background tasks can ensure smoother performance for resource-heavy applications.
