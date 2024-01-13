@@ -8,8 +8,13 @@ function Stop-TargetProcesses {
 
         foreach ($AAmmProcess in $AAmmProcesses) {
             Write-Host "Attempting to stop process $($AAmmProcess.Id) - $($AAmmProcess.ProcessName)"
-            $AAmmProcess | Stop-Process -ErrorAction Stop
-            Write-Host "Stopped $($AAmmProcess.Id) - $($AAmmProcess.ProcessName)"
+            try {
+                $AAmmProcess | Stop-Process -ErrorAction Stop
+                Write-Host "Stopped $($AAmmProcess.Id) - $($AAmmProcess.ProcessName)"
+            }
+            catch {
+                Write-Host "Cannot stop process $($AAmmProcess.Id) - $($AAmmProcess.ProcessName): Access Denied"
+            }
         }
     }
     catch {
@@ -17,6 +22,7 @@ function Stop-TargetProcesses {
         Write-Host "Error occurred during process termination: $($_.Exception.Message)"
     }
 }
+
 
 
 # Validate and call SleepAndExecute
