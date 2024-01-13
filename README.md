@@ -6,10 +6,8 @@
 - I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to, self-repair or have not been disabled.
 - Next steps are...
 1. Try it in safe mode. GPT: For effective registry modifications, especially on Windows 10 version 1903 and later, including Windows 11, it's necessary to boot the computer into Safe Mode. 
-2. Finding new techniques to, shutdown and disable, Tamper Protection and All other relevant items.
-3. Individually go through, each and every, function, double checking and produce research, ensure everyting is correctly done, and fix inconsistencies in the process.
-4. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
-5. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
+2. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
+3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
 ### DESCRIPTION
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense.
