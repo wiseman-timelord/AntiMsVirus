@@ -8,11 +8,13 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 
 ### FEATURES
 - **User Interface**: A menu-driven interface for easy interaction and selection of different features.
-- **Registry Modification**: It includes functions to modify the registry to disable Microsoft Defender and related services.
+- **Registry Modification**: Functions to modify the registry to disable Microsoft Defender and related services.
 - **Process Management**: Capability to identify and terminate specific processes related to Microsoft's anti-malware services.
-- **Tamper Protection Disabling**: Offers the ability to disable the tamper protection feature, which often prevents changes to Microsoft Defender settings.
+- **Tamper Protection Disabling**: Ability to disable the tamper protection feature, which often prevents changes to Microsoft Defender settings.
 - **Customizable Defender Settings**: Allows users to customize the behavior of Microsoft Defender, such as disabling real-time monitoring and altering threat response actions.
-- **Visual Elements**: ASCII art for a more engaging user experience.
+- **Visual Elements**: Incorporates ASCII art for a more engaging user experience.
+- **Scheduled Task Management**: Includes functionality to disable scheduled tasks related to Windows Defender, ensuring further minimization of its activities.
+- **Folder Ownership Modification**: Provides a feature to change the ownership of the Windows Defender directory, facilitating more profound system-level changes for disabling the antivirus.
 
 ### PREVIEW
 - Its no small task to remove a virus...
