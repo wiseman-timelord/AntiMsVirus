@@ -1,13 +1,10 @@
 # AntiMsVirus-Ps
 
-### STATUS: ALPHA
-- AntiMsVirus requires to be further developed, but for now it has hit a brick wall, having implemented all of GPT's websearched instruction upon what CAN be done. `MpCopyAccelerator` and `MsMpEng`, are still refusing to be, disabled or shutdown, permanently.
-- The options in the menu have limited success, but do some things as intended, however, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked, my instinct says Tamper Protection.
-- I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to, self-repair or have not been disabled.
-- Next steps are...
-1. Try it in safe mode. GPT: For effective registry modifications, especially on Windows 10 version 1903 and later, including Windows 11, it's necessary to boot the computer into Safe Mode. 
-2. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
-3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
+### STATUS: WORKING
+- This program is able to disable the Microsoft Anti-Virus, however, due to development issues where it was not tested in Safe Mode until later, it is COMPLETE OVERKILL, it can do the task 10 times over. >_>  
+- Further Development...
+1. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
+2. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
 ### DESCRIPTION
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense.
@@ -30,19 +27,21 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
            /_/   \_\_|  |_|  \_/
 ===============( AntiMsVirus )===============
 
+    1. Disable Tamper Protection
 
-    1. Registry Edits (requires restart)
+    2. Registry Edits (requires restart)
 
-    2. Disable Tamper Protection
+    3. Disable Services (requires restart)
 
-    3. Disable Defender Features
+    4. Defender Folder Ownership
 
-    4. Disable Services (requires restart)
+    5. Disable Defender Scheduled Tasks
 
-    5. Run Process Scans & Terminate
+    6. Run Process Scans & Terminate
 
+    7. Disable Defender Features
 
-Select, MenuOptions=1-5, Exit Program=X:
+Select, MenuOptions=1-7, Exit Program=X:
 
 ```
 - And here we see it in operation...
