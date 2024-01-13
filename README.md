@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- Stuck: Why is there a higher privaledge than Admin? 
+- This is probably going to involve a lot more work now/possibly a dead end. 
 ```
 Found 2 processes
 Attempting to stop process 8264 - MpCopyAccelerator
