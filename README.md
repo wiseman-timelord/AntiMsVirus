@@ -1,7 +1,7 @@
 # AntiMsVirus-Ps
 
 ### STATUS: ALPHA
-- This involved a lot more work than I wanted, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown...
+- This involved a lot more work than I intended, and now possibly a dead end, with, `MpCopyAccelerator` and `MsMpEng`, refusing to be, disabled or shutdown...
 ```
 Found 2 processes
 Terminating 7944 MpCopyAccelerator
