@@ -45,8 +45,7 @@ function Show-Menu {
         Write-Host "    2. Disable Tamper Protection`n"
         Write-Host "    3. Disable Defender Features`n"
         Write-Host "    4. Disable Services (requires restart)`n"
-        Write-Host "    5. Run Process Scans & Terminate`n"
-        Write-Host "    X. Exit Program`n`n"
+        Write-Host "    5. Run Process Scans & Terminate`n`n"
         Write-Host -NoNewline "Select, MenuOptions=1-5, Exit Program=X: "
         $input = Read-Host
 
