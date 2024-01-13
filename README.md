@@ -38,6 +38,13 @@ Disabling Defender Features...
 ..Disabling Realtime-Monitoring..
 ...Defender Features Disabled.
 
+Check Features States...
+..Low Threats: Allow
+..Moderate Threats: Allow
+..High Threats: Allow
+..Realtime Monitoring: True
+...Features States Reported.
+
 Finding & Closing, Processes...
 Starting Pass 1...
 Pass 1 In 5 Seconds..
