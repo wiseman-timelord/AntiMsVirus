@@ -64,6 +64,10 @@ Press any key to continue . . .
 
 ```
 
+### REQUIREMENTS
+- Windows 10/11 (unsure about 11, I will check later)
+- Windows Powershell or Powershell Core.
+
 ### USAGE
 1. You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus/Anti-Malware.  
 2. If you do decide to use this program dispite my advice, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
