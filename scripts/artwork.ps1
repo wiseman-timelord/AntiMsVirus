@@ -12,3 +12,11 @@ function Show-AsciiArt {
 "@
     Write-Host $asciiArt
 }
+
+# Function Show Header
+function Show-Header {
+    $asciiArt = @"
+`n===============( AntiMsVirus )===============`n`n
+"@
+    Write-Host $asciiArt
+}

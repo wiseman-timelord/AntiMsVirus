@@ -1,7 +1,9 @@
 # Script: scripts\utility.ps1
 
 function Disable-DefenderRegistry {
-    Write-Host "`nDisabling Defender Registry..."
+    Clear-Host
+	Show-Header 
+	Write-Host "Disabling Defender Registry..."
     Start-Sleep -Seconds 1
 
     try {
@@ -16,19 +18,20 @@ function Disable-DefenderRegistry {
         } else {
             Write-Host "..Error Value Un-Changed!`n"
         }
-		Write-Host "`n...Registry Edits Finished."
+		Write-Host "...Registry Edits Finished."
     }
     catch {
         $errorMessage = "Error registry: $($_.Exception.Message)"
         Log-Error $errorMessage
         Write-Host "..Error encountered: $errorMessage"
     }
-    Start-Sleep -Seconds 2
 }
 
 
 function Run-DisableTamperProtection {
-    Write-Host "Disabling Tamper Protection..."
+    Clear-Host
+	Show-Header 
+	Write-Host "Disabling Tamper Protection..."
     try {
         Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop
         Write-Host "..Tamper Protection Disabled"
@@ -50,7 +53,9 @@ function Run-DisableTamperProtection {
 
 
 function Run-DisableDefenderFeatures {
-    Write-Host "Disabling Defender Features..."
+    Clear-Host
+	Show-Header 
+	Write-Host "Disabling Defender Features..."
     try {
         Write-Host "..Disabling Low-Threats.."
         Set-MpPreference -LowThreatDefaultAction Allow -ErrorAction SilentlyContinue
@@ -96,7 +101,9 @@ function Translate-DefenderAction {
 
 # Function: Run Go3MpScans
 function Run-3ScansAndTerminations {
-    Write-Host "Finding & Closing, Processes..."
+    Clear-Host
+	Show-Header 
+	Write-Host "Finding & Closing, Processes..."
     try {
         1..2 | ForEach-Object { ValidateAndExecute }
     }
@@ -132,7 +139,9 @@ function Stop-TargetProcesses {
 }
 
 function Disable-DefenderServicesAndDrivers {
-    Write-Host "Disabling Defender Services and Drivers..."
+    Clear-Host
+	Show-Header 
+	Write-Host "Disabling Defender Services and Drivers..."
     $services = @("WdNisSvc", "WinDefend", "Sense")
     $drivers = @("WdnisDrv", "wdfilter", "wdboot")
 

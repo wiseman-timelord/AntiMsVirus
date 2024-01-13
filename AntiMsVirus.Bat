@@ -1,5 +1,5 @@
 @echo off
-mode 45,45
+mode 45,22
 echo.
 echo Batch Launcher Started....
 echo.
@@ -30,12 +30,12 @@ where pwsh >nul 2>&1
 echo ..Capabilities Detected.
 if %ERRORLEVEL% equ 0 (
 	echo Launching Psc Script..
-    timeout /t 2 /nobreak >nul
+    timeout /t 1 /nobreak >nul
     pwsh.exe -NoProfile -ExecutionPolicy Bypass -File ".\main.ps1"
     echo ..Psc Process Exited.
 ) else (
     echo Launching Ps Script..
-    timeout /t 2 /nobreak >nul
+    timeout /t 1 /nobreak >nul
     powershell.exe -NoProfile -ExecutionPolicy Bypass -File ".\main.ps1"
     echo ..Ps Process Exited.
 	echo.

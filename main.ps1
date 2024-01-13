@@ -39,7 +39,7 @@ function Log-Error {
 # Function to Show Menu and Handle User Input
 function Show-Menu {
     while ($true) {
-        # Clear-Host
+        Clear-Host
         Show-AsciiArt
         Write-Host "`n`n    1. Registry Edits (requires restart)`n"
         Write-Host "    2. Disable Tamper Protection`n"
@@ -52,23 +52,23 @@ function Show-Menu {
         switch ($input.ToUpper()) {
             '1' {
                 Disable-DefenderRegistry
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 5
             }
             '2' {
                 Run-DisableTamperProtection
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 5
             }
             '3' {
                 Run-DisableDefenderFeatures
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 5
             }
             '4' {
                 Disable-DefenderServicesAndDrivers
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 5
             }
             '5' {
                 Run-3ScansAndTerminations
-                Start-Sleep -Seconds 2
+                Start-Sleep -Seconds 5
             }
             'X' {
                 Write-Host "Exiting..."
