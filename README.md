@@ -26,16 +26,20 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 ===============( AntiMsVirus )===============
 
 
-    1. Disable Tamper Protection
+    1. Registry Edits (requires restart)
 
-    2. Disable Defender Features
+    2. Disable Tamper Protection
 
-    3. Disable Services (requires restart)
+    3. Disable Defender Features
 
-    4. Run Process Scans & Terminate
+    4. Disable Services (requires restart)
+
+    5. Run Process Scans & Terminate
+
+    X. Exit Program
 
 
-Select, MenuOptions=1-4, Exit Program=X:
+Select, MenuOptions=1-5, Exit Program=X:
 
 ```
 - Doing its thing...
