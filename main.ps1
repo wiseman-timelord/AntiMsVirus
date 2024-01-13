@@ -44,4 +44,4 @@ Run-DisableDefenderFeatures
 Run-3ScansAndTerminations
 
 # Exit
-Write-Host "`n`n....PowerShell Script Finished.`n"
+Write-Host "`n`n....AntiMsVirus Finished.`n"

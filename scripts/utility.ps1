@@ -12,6 +12,7 @@ function Run-DisableDefenderFeatures {
 		Write-Host "..Disabling Realtime-Monitoring.."
         Set-MpPreference -DisableRealtimeMonitoring $true
         Write-Host "...Defender Features Disabled.`n`n"
+		Start-Sleep -Seconds 2
     }
     catch {
         $errorMessage = "Error In Disable-Defender: $($_.Exception.Message)"
