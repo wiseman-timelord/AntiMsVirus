@@ -1,26 +1,71 @@
 # Script: scripts\utility.ps1
 
+function Run-DisableTamperProtection {
+    Write-Host "Disabling Tamper Protection..."
+    try {
+        Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop
+        Write-Host "..Tamper Protection Disabled"
+        Start-Sleep -Seconds 2
+
+        Write-Host "Checking Tamper Protection State..."
+        $mpPrefs = Get-MpPreference
+        $status = if ($mpPrefs.DisableTamperProtection) { "Disabled" } else { "Enabled" }
+        Write-Host "..Tamper Protection Status: $status`n"
+    }
+    catch {
+        $errorMessage = "Error: $($_.Exception.Message)"
+        Log-Error $errorMessage
+        Write-Host $errorMessage
+        Write-Host "...Skipping State Check`n"
+    }
+    Start-Sleep -Seconds 1
+}
+
+
 function Run-DisableDefenderFeatures {
     Write-Host "Disabling Defender Features..."
     try {
         Write-Host "..Disabling Low-Threats.."
-		Set-MpPreference -LowThreatDefaultAction Allow -ErrorAction SilentlyContinue
-		Write-Host "..Disabling Moderate-Threats.."
+        Set-MpPreference -LowThreatDefaultAction Allow -ErrorAction SilentlyContinue
+        Write-Host "..Disabling Moderate-Threats.."
         Set-MpPreference -ModerateThreatDefaultAction Allow -ErrorAction SilentlyContinue
-		Write-Host "..Disabling High-Threats.."
+        Write-Host "..Disabling High-Threats.."
         Set-MpPreference -HighThreatDefaultAction Allow -ErrorAction SilentlyContinue
-		Write-Host "..Disabling Realtime-Monitoring.."
+        Write-Host "..Disabling Realtime-Monitoring.."
         Set-MpPreference -DisableRealtimeMonitoring $true
-        Write-Host "...Defender Features Disabled.`n`n"
-		Start-Sleep -Seconds 2
+        Write-Host "...Defender Features Disabled.`n"
+        Start-Sleep -Seconds 2
+        Write-Host "Check Features States..."
+        $mpPrefs = Get-MpPreference
+        Write-Host "..Low Threats: $(Translate-DefenderAction $mpPrefs.LowThreatDefaultAction)"
+        Write-Host "..Moderate Threats: $(Translate-DefenderAction $mpPrefs.ModerateThreatDefaultAction)"
+        Write-Host "..High Threats: $(Translate-DefenderAction $mpPrefs.HighThreatDefaultAction)"
+        Write-Host "..Realtime Monitoring: $($mpPrefs.DisableRealtimeMonitoring)"
+        Write-Host "...Features States Reported.`n"
+        Start-Sleep -Seconds 1
     }
     catch {
-        $errorMessage = "Error In Disable-Defender: $($_.Exception.Message)"
+        $errorMessage = "Error in Disable-Defender: $($_.Exception.Message)"
         Log-Error $errorMessage
         Write-Host $errorMessage
-	Start-Sleep -Seconds 1
+        Start-Sleep -Seconds 1
     }
 }
+
+
+function Translate-DefenderAction {
+    param([int]$actionCode)
+    switch ($actionCode) {
+        0 { return "Clean" }
+        1 { return "Quarantine" }
+        2 { return "Remove" }
+        6 { return "Allow" }
+        8 { return "UserDefined" }
+        9 { return "NoAction" }
+        default { return "Unknown Action" }
+    }
+}
+
 
 # Function: Run Go3MpScans
 function Run-3ScansAndTerminations {
@@ -30,6 +75,7 @@ function Run-3ScansAndTerminations {
     }
     catch {
         Log-Error $_.Exception.Message
+		Start-Sleep -Seconds 1
     }
     Write-Host "...2 Passes Complete."
 	Start-Sleep -Seconds 1

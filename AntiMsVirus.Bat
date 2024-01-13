@@ -1,5 +1,5 @@
 @echo off
-mode 45,37
+mode 45,45
 echo.
 echo Batch Launcher Started....
 echo.

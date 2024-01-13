@@ -40,6 +40,7 @@ function Log-Error {
 
 
 # Entry Point
+Run-DisableTamperProtection
 Run-DisableDefenderFeatures
 Run-3ScansAndTerminations
 
