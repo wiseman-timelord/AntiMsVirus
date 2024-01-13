@@ -5,8 +5,9 @@
 - The options in the menu have limited success, but do some things as intended, however, `Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop` has never worked, my instinct says Tamper Protection.
 - I tried doing all options on the menu in order with restarts, I then tried all of the items on the menu twice over without restart then restarted, the effects are the same, the virus seems to, self-repair or have not been disabled.
 - Next steps are...
-1. Finding new techniques to, shutdown and disable, Tamper Protection and All other relevant items.
-2. Individually go through, each and every, function, double checking and produce research, ensure everyting is correctly done, and fix inconsistencies in the process.
+1. Try it in safe mode. GPT: For effective registry modifications, especially on Windows 10 version 1903 and later, including Windows 11, it's necessary to boot the computer into Safe Mode. 
+2. Finding new techniques to, shutdown and disable, Tamper Protection and All other relevant items.
+3. Individually go through, each and every, function, double checking and produce research, ensure everyting is correctly done, and fix inconsistencies in the process.
 4. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
 5. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
