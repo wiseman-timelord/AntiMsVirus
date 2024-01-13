@@ -1,4 +1,4 @@
-# Script: .\scripts\artwork.ps1
+# Script: artwork.ps1
 
 # Function Show Asciiart
 function Show-AsciiArt {

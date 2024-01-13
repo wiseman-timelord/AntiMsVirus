@@ -1,6 +1,4 @@
 # Script: main.ps1
-
-# Initialization
 . .\scripts\artwork.ps1
 . .\scripts\utility.ps1
 
@@ -10,18 +8,14 @@ $Global:ScanPassCounter = 0
 
 # Initialization
 Set-Location -Path $PSScriptRoot
-
-# Got Admin
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
     Write-Host "Admin Required, Run As Admin!`n" -ForegroundColor Red
     exit
 }
-
-# Introduction
 Clear-Host
 Write-Host "`n`nAntiMsVirus Started....`n`n"
 
-# Function to log errors
+# Function Log Error
 function Log-Error {
     param($ErrorMessage)
     $logFilePath = ".\Error-Crash.Log"
@@ -36,7 +30,7 @@ function Log-Error {
     }
 }
 
-# Function to Show Menu and Handle User Input
+# Function Show Menu
 function Show-Menu {
     while ($true) {
         Clear-Host
@@ -48,7 +42,6 @@ function Show-Menu {
         Write-Host "    5. Run Process Scans & Terminate`n`n"
         Write-Host -NoNewline "Select, MenuOptions=1-5, Exit Program=X: "
         $input = Read-Host
-
         switch ($input.ToUpper()) {
             '1' {
                 Disable-DefenderRegistry
@@ -85,6 +78,4 @@ function Show-Menu {
 
 # Entry Point
 Show-Menu
-
-# Exit
 Write-Host "`n....AntiMsVirus Finished.`n"

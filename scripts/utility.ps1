@@ -1,17 +1,17 @@
-# Script: scripts\utility.ps1
+# Script: utility.ps1
 
+# Function Disable Defenderregistry
 function Disable-DefenderRegistry {
     Clear-Host
 	Show-Header 
 	Write-Host "Disabling Defender Registry..."
     Start-Sleep -Seconds 1
-
     try {
         Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware" -Value 1 -ErrorAction Stop
         Write-Host "..Registry Modified"
-
-        # Confirming the change
         Write-Host "Checking Values.."
+
+# Variables
 		$regValue = Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender" -Name "DisableAntiSpyware"
         if ($regValue.DisableAntiSpyware -eq 1) {
             Write-Host "..Defender Registry Disabled."
@@ -27,7 +27,7 @@ function Disable-DefenderRegistry {
     }
 }
 
-
+# Function Run Disabletamperprotection
 function Run-DisableTamperProtection {
     Clear-Host
 	Show-Header 
@@ -36,7 +36,6 @@ function Run-DisableTamperProtection {
         Set-MpPreference -DisableTamperProtection $true -ErrorAction Stop
         Write-Host "..Tamper Protection Disabled"
         Start-Sleep -Seconds 2
-
         Write-Host "Checking Tamper Protection State..."
         $mpPrefs = Get-MpPreference
         $status = if ($mpPrefs.DisableTamperProtection) { "Disabled" } else { "Enabled" }
@@ -51,7 +50,7 @@ function Run-DisableTamperProtection {
     Start-Sleep -Seconds 1
 }
 
-
+# Function Run Disabledefenderfeatures
 function Run-DisableDefenderFeatures {
     Clear-Host
 	Show-Header 
@@ -84,7 +83,7 @@ function Run-DisableDefenderFeatures {
     }
 }
 
-
+# Function Translate Defenderaction
 function Translate-DefenderAction {
     param([int]$actionCode)
     switch ($actionCode) {
@@ -98,8 +97,7 @@ function Translate-DefenderAction {
     }
 }
 
-
-# Function: Run Go3MpScans
+# Function Run 3scansandterminations
 function Run-3ScansAndTerminations {
     Clear-Host
 	Show-Header 
@@ -115,12 +113,11 @@ function Run-3ScansAndTerminations {
 	Start-Sleep -Seconds 1
 }
 
-# Terminate Processes
+# Function Stop Targetprocesses
 function Stop-TargetProcesses {
     try {
         $AAmmProcesses = Get-Process | Where-Object { $_.ProcessName -like "Mp*" -or $_.ProcessName -like "MsMp*" }
         Write-Host "Found $($AAmmProcesses.Count) processes"
-
         foreach ($AAmmProcess in $AAmmProcesses) {
             Write-Host "Terminating $($AAmmProcess.Id) $($AAmmProcess.ProcessName)"
             try {
@@ -138,13 +135,13 @@ function Stop-TargetProcesses {
     }
 }
 
+# Function Disable Defenderservicesanddrivers
 function Disable-DefenderServicesAndDrivers {
     Clear-Host
 	Show-Header 
 	Write-Host "Disabling Defender Services and Drivers..."
     $services = @("WdNisSvc", "WinDefend", "Sense")
     $drivers = @("WdnisDrv", "wdfilter", "wdboot")
-
     try {
         foreach ($svc in $services) {
             Write-Host "..Disabling Service: $svc"
@@ -163,17 +160,15 @@ function Disable-DefenderServicesAndDrivers {
     }
 }
 
-
-
-# Validate and call SleepAndExecute
+# Function Validateandexecute
 function ValidateAndExecute {
-    $Global:ScanPassCounter++  # Increment the counter
+    $Global:ScanPassCounter++  
     Write-Host "Starting Pass $Global:ScanPassCounter..."
     Write-Host "Pass $Global:ScanPassCounter In 5 Seconds.."
     SleepAndExecute
 }
 
-# Sleep & Execute
+# Function Sleepandexecute
 function SleepAndExecute {
     try {
         Start-Sleep -Seconds 5
