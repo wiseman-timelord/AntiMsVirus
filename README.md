@@ -10,16 +10,16 @@
 4. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
 5. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
-### DESCRIPTION:
+### DESCRIPTION
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense.
 
 ### FEATURES
-- **User Interface** A menu-driven interface for easy interaction and selection of different features.
-- **Registry Modification** It includes functions to modify the registry to disable Microsoft Defender and related services.
-- **Process Management** Capability to identify and terminate specific processes related to Microsoft's anti-malware services.
-- **Tamper Protection Disabling** Offers the ability to disable the tamper protection feature, which often prevents changes to Microsoft Defender settings.
-- **Customizable Defender Settings** Allows users to customize the behavior of Microsoft Defender, such as disabling real-time monitoring and altering threat response actions.
-- **Visual Elements** ASCII art for a more engaging user experience.
+- **User Interface**: A menu-driven interface for easy interaction and selection of different features.
+- **Registry Modification**: It includes functions to modify the registry to disable Microsoft Defender and related services.
+- **Process Management**: Capability to identify and terminate specific processes related to Microsoft's anti-malware services.
+- **Tamper Protection Disabling**: Offers the ability to disable the tamper protection feature, which often prevents changes to Microsoft Defender settings.
+- **Customizable Defender Settings**: Allows users to customize the behavior of Microsoft Defender, such as disabling real-time monitoring and altering threat response actions.
+- **Visual Elements**: ASCII art for a more engaging user experience.
 
 ### PREVIEW
 - Its no small task to remove a virus...
