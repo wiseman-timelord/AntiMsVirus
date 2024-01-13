@@ -18,28 +18,35 @@ Microsoft Anti-Malware is able to be turned off by manually going into Ms AV set
        _____ / _ \_| |\/| |\ \_/ /____
       |_____/ ___ \| |__| |_\ V /_____|
            /_/   \_\_|  |_|  \_/
+===============( AntiMsVirus )===============
 
 
 AntiMsVirus Started....
 
-Pass 1 In 5 Seconds...
 
-Error-Crash.Log Protected!
-Run As Admin/Close Notepad!
+Finding & Closing, Processes...
+Starting Pass 1...
+Pass 1 In 5 Seconds..
+Sleeping for 5 seconds..
+Found 0 processes
+Starting Pass 2...
+Pass 2 In 5 Seconds..
+Sleeping for 5 seconds..
+Found 0 processes
+Starting Pass 3...
+Pass 3 In 5 Seconds..
+Sleeping for 5 seconds..
+Found 0 processes
+...3 Passes Complete.
 
-Pass 2 In 10 Seconds...
 
-Error-Crash.Log Protected!
-Run As Admin/Close Notepad!
+....PowerShell Script Finished.
 
-...End Of Script.
-
-...Main Script Exited.
-
-....Launch Sequence Complete.
+..Psc Script Exited.
+...Launch Sequence Complete.
 
 
-.....Batch Launcher Finished.
+....Batch Launcher Finished.
 
 Press any key to continue . . .
 
