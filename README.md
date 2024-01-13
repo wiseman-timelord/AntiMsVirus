@@ -8,7 +8,6 @@ Attempting to stop process 8264 - MpCopyAccelerator
 Cannot stop process 8264 - MpCopyAccelerator: Access Denied
 Attempting to stop process 4872 - MsMpEng
 Cannot stop process 4872 - MsMpEng: Access Denied
-
 ```
 - GPT: you may need to look into more advanced techniques, which could involve system-level operations beyond the scope of a typical PowerShell script. 
 
