@@ -88,6 +88,7 @@ Error 4872 MsMpEng
 ### USAGE
 1. You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus/Anti-Malware.  
 2. If you do decide to use this program dispite my advice, then you need to run the batch `AntiMsVirus.Bat` with Admin rights.
+3. Go through each option on the menu in sequence, producing restarts as indicated until you complete 5.
 3. Utilize your own choice of Security software upon your own computer, I advise passive protection ran monthly.
 
 ### DISCLAIMER
