@@ -91,6 +91,7 @@ Error 4872 MsMpEng
 4. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
 
 ### DEVELOPMENT
+- Not really going to happen, but heres the potential plans... 
 1. Make sure all Outputted text is in correct formatting regarding, spaces and dots.
 2. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
