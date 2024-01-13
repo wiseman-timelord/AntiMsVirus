@@ -68,5 +68,5 @@ Press any key to continue . . .
 
 ```
 
-DISCLAIMER
+### DISCLAIMER
 This program is provided "as is" without warranties or support. Users are responsible for the content they, download and use, as well as, any resulting damage to, hardware or sanity.
