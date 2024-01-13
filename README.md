@@ -54,7 +54,7 @@ Found 0 processes
 ...3 Passes Complete.
 
 
-....PowerShell Script Finished.
+....AntiMsVirus Finished.
 
 ..Psc Script Exited.
 ...Launch Sequence Complete.
