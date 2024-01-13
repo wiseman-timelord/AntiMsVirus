@@ -97,7 +97,6 @@ function Translate-DefenderAction {
     }
 }
 
-
 # Function Change-DefenderFolderOwnership
 function Change-DefenderFolderOwnership {
     Clear-Host
@@ -105,14 +104,12 @@ function Change-DefenderFolderOwnership {
     Write-Host "Changing Defender Folder Ownership..."
 
     $defenderPath = "C:\ProgramData\Microsoft\Windows Defender"
-    $ownershipCommand = @"
-takeown /f $defenderPath /r /d y
-icacls $defenderPath /grant Administrators:F /t
-"@
-
+    
     try {
         # Change the ownership of the Windows Defender folder
-        Invoke-Expression -Command $ownershipCommand
+        takeown /f "$defenderPath" /r /d y
+        icacls "$defenderPath" /grant Administrators:F /t
+
         Write-Host "...Defender Folder Ownership Changed.`n"
     }
     catch {
@@ -121,7 +118,6 @@ icacls $defenderPath /grant Administrators:F /t
         Write-Host $errorMessage
     }
 }
-
 
 # Function Disable-DefenderScheduledTasks
 function Disable-DefenderScheduledTasks {
