@@ -2,52 +2,55 @@
 
 # Initialization
 . .\scripts\artwork.ps1
-. .\scripts\terminator.ps1
+. .\scripts\utility.ps1
 
 # Variables
 $ErrorActionPreference = 'Stop'
+$Global:ScanPassCounter = 0
 
 # Initialization
 Set-Location -Path $PSScriptRoot
 
+# Got Admin?
+if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Host "Admin Required, Run As Admin!`n" -ForegroundColor Red
+    exit
+}
+
 # Introduction
 Clear-Host
 Show-AsciiArt
-Write-Host "`n`nAntiMsVirus Started....`n"
+Write-Host "`n`nAntiMsVirus Started....`n`n"
 
 # Function to log errors
 function Log-Error {
     param($ErrorMessage)
     $logFilePath = ".\Error-Crash.Log"
-
-    # Check if the file is being used by another process
     try {
-        # Try to open the file for reading and writing
         $fileStream = [System.IO.File]::OpenWrite($logFilePath)
         $fileStream.Close()
-
-        # If successful, append the error message to the file
         $ErrorMessage | Out-File -Append -FilePath $logFilePath
     }
     catch {
-        # If an error occurs, it's likely because the file is in use
         Write-Host "Error-Crash.Log Protected!"
-		Write-Host "Run As Admin/Close Notepad!`n"
+		Write-Host "Run As Admin/Close Notepad!"
     }
 }
 
-try {
-    # Pass Number 1
-    Write-Host "Pass 1 In 5 Seconds...`n"
-    SleepAndExecute -seconds 5
+# Function: Run Go3MpScans
+function Run-Go3MpScans {
+    Write-Host "Finding & Closing, Processes..."
+    try {
+        1..3 | ForEach-Object { ValidateAndExecute }
+    }
+    catch {
+        Log-Error $_.Exception.Message
+    }
+    Write-Host "...3 Passes Complete."
+}
 
-    # Pass Number 2
-    Write-Host "Pass 2 In 10 Seconds...`n"
-    SleepAndExecute -seconds 10
-}
-catch {
-    Log-Error $_.Exception.Message
-}
+# Entry Point
+Run-Go3MpScans
 
 # Exit
-Write-Host "...End Of Script.`n"
+Write-Host "`n`n....PowerShell Script Finished.`n"
