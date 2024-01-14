@@ -100,4 +100,4 @@ Error 4872 MsMpEng
 3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
 ## DISCLAIMER
-The "License.Txt" covers, this and relating, stuff.
+This software is subject to the terms in License.Txt, covering usage, distribution, and modifications. For full details on your rights and obligations, refer to License.Txt.
