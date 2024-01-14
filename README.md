@@ -1,12 +1,12 @@
 # AntiMsVirus-Ps
 
-### STATUS: WORKING
+## STATUS: WORKING
 - This program is able to disable the Microsoft Anti-Virus, however, due to development issues it was not tested in Safe Mode until later, it, is COMPLETE OVERKILL and does the task 10 times over, though thats nice too B).  
 
 ### DESCRIPTION
 Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going into Ms AV settings, but the user must do this EVERY TIME they boot up, and even then, there are relating processes still present, and the service is not able to be disabled in services. AntiMsVirus-Ps is a tool to, shut down and close, the Microsoft Anti-Malware, in Windows 10, it is focused on locating and terminating processes that are related to Microsoft's anti-malware services or applications ("Mp*.*" and "MsMp*.*"). The reason you would want to do such things, is because some people believe its better to have passive protection ran once a month as a, scheduled or manual, task, when other maintenance is also done; in short, having something continually run to check for virus, defeats the point of an anti-virus in its classic sense.
 
-### FEATURES
+## FEATURES
 - **User Interface**: A menu-driven interface for easy interaction and selection of different features.
 - **Registry Modification**: Functions to modify the registry to disable Microsoft Defender and related services.
 - **Process Management**: Capability to identify and terminate specific processes related to Microsoft's anti-malware services.
@@ -16,7 +16,7 @@ Microsoft Anti-Malware in Windows 10 onwards is turned off by manually going int
 - **Scheduled Task Management**: Includes functionality to disable scheduled tasks related to Windows Defender, ensuring further minimization of its activities.
 - **Folder Ownership Modification**: Provides a feature to change the ownership of the Windows Defender directory, facilitating more profound system-level changes for disabling the antivirus.
 
-### PREVIEW
+## PREVIEW
 - Its no small task to remove a virus...
 ```
                _    __  ____     __
@@ -85,7 +85,7 @@ Error 4872 MsMpEng
 - Windows 10/11
 - Windows Powershell or Powershell Core.
 
-### USAGE
+## USAGE
 * You should not use this program, unless you are NEVER EVER intending to use Microsoft Anti-Virus.
 1. Create a restore point, this may be useful later if experiencing issues, so you can revert changes. 
 2. On Windows 10v1903-11, you must first boot into Safe Mode, type "safe mode" into the start menu. 
@@ -100,4 +100,4 @@ Error 4872 MsMpEng
 3. Consistency in error reporting, sometimes it prints to screen only, sometimes it uses the log too.
 
 ### DISCLAIMER
-Read "License.Txt", its, what its there for and why its supplied with the package.
+The "License.Txt" covers, this and relating, stuff.
