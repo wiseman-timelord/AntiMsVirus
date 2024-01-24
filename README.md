@@ -93,6 +93,9 @@ Error 4872 MsMpEng
 4. Try some of the options on the menu, then restart and see, or just go through them all in order.
 5. Utilize your choice of Security software on the computer, I advise passive protection ran monthly.
 
+### NOTATION
+- After applying all the hacks in, normal and safe, modes, NO I did not break my computer or suffer any OS issues, so consider it safe, but again, if you are going to want to turn the MS Virus back on at some point, then don't use my program, as I will not be testing the back-on part.
+
 ## DEVELOPMENT
 - Not really going to happen, but heres the potential plans... 
 1. Options to delete the defender folder, after setting the defender folder permission (is this safe?).
